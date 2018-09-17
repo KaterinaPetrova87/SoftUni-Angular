@@ -1,0 +1,38 @@
+
+div.card {
+  margin: 10px;
+}
+
+div.card img {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+h5.left {
+  float: left;
+  margin-left: 100px;
+}
+
+h5.right {
+  float: right;
+  margin-right: 100px;
+}
+
+a {
+  display: inline-block;
+}
+
+div.btns {
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+a.btn-left {
+  float: left;
+}
+
+a.btn-right {
+  float: right;
+}

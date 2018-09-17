@@ -1,0 +1,29 @@
+<div>
+<div *ngFor="let p of products | async | paginate: {
+    id: 'allProducts',
+    itemsPerPage: pageSize,
+    currentPage: currentPage
+}" class="card mb-3">
+    <img style="width: 200px; display: block;" src="{{p.image}}" alt="image">
+    <div>
+        <h5 class="left">{{p.name | titlecase}}</h5>
+        <h5 class="right">{{p.price | number : '1.2-2'}} €</h5>
+    </div>
+    <br>
+    <a class="btn" routerLink="/products/details/{{p._id}}">
+        <button type="button" class="btn btn-secondary">View details</button>
+    </a>
+</div>
+<pagination-controls 
+    id="allProducts" 
+    (pageChange)=changePage($event) 
+    maxSize="9" directionLinks="true" 
+    autoHide="true" 
+    responsive="true"
+    previousLabel="Previous" 
+    nextLabel="Next" 
+    screenReaderPaginationLabel="Pagination" 
+    screenReaderPageLabel="page" 
+    screenReaderCurrentLabel="You're on page">
+</pagination-controls>
+</div>

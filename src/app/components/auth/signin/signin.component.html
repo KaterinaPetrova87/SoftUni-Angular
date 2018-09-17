@@ -1,0 +1,33 @@
+<div>
+    <form #form="ngForm" (ngSubmit)="login()">
+      <fieldset>
+        <legend>Sign In</legend>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Username</label>
+          <input type="email" class="form-control" placeholder="Enter username"
+          required
+          name="username"
+          [(ngModel)]="bindingModel.username"
+          #username="ngModel">
+          <div class="alert alert-dark" [hidden]="username.valid || username.pristine">
+              Username is required
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <input type="password" class="form-control" placeholder="Password"
+          required
+          name="password"
+          [(ngModel)]="bindingModel.password"
+          #password="ngModel">
+          <div class="alert alert-dark" [hidden]="password.valid || password.pristine">
+              Password is required
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Sign In</button>
+      </fieldset>
+      <div>Don't Have an Account?
+        <a routerLink="/auth/signup">Sign Up</a>
+      </div>
+    </form>
+  </div>

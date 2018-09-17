@@ -1,0 +1,17 @@
+li {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+i > img {
+  max-height: 40px;
+}
+
+img {
+  max-height: 59px;
+}
+
+span#username {
+  margin-right: auto;
+  margin-left: auto;
+}

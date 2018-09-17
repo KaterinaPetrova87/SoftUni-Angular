@@ -1,0 +1,27 @@
+<h3 class="card-header">Product Details</h3>
+<div *ngIf="product | async as p" class="card mb-3">
+  <img style="width: 200px; display: block;" src="{{p.image}}" alt="image">
+  <div>
+    <h5 class="left">{{p.name | titlecase}}</h5>
+    <h5 class="right" style="color:red">{{p.price | number : '1.2-2'}} €</h5>
+  </div>
+  <br>
+  <div class="card-body">
+    <p class="card-text">{{p.description}}</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Author: {{p.author}}</li>
+    <li class="list-group-item">Published on: {{p._kmd.lmt | date: 'longDate'}}</li>
+  </ul>
+  <div class="btns">
+  <a class="btn-add">
+    <button (click)="addToCart()" type="button" class="btn btn-secondary">Add to cart</button>
+  </a>
+  <a class="btn-left" routerLink="/products/edit/{{p._id}}">
+    <button *ngIf="authService.isAdmin()" type="button" class="btn btn-success">Edit</button>
+  </a>
+  <a class="btn-right" routerLink="/products/delete/{{p._id}}">
+    <button *ngIf="authService.isAdmin()" type="button" class="btn btn-danger">Delete</button>
+  </a>
+</div>
+</div>
