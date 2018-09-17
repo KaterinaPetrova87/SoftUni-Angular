@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # ArtShop
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
@@ -29,3 +30,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 # SoftUni-Angular
 SoftUni - Angular Fundamentals
 >>>>>>> b6220e7c5cac769f487d7f738aa0cbb8e4c9f8c3
+=======
+# SoftUni-Angular
+SoftUni - Angular Fundamentals
+>>>>>>> d06769023a756cbee6457fcae185c80cffe07c80
